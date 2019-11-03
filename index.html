@@ -28,23 +28,94 @@
         </g>
       </svg>
 
-      <button>Start</button>
+      <button id="start">Start</button>
     </div>
 
-    <div class="intro hidden">
-      <!-- <svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <clipPath id="myClip">
-          <circle cx="50" cy="10" r="20" fill="red" stroke="blue" />
-        </clipPath>
 
-        <rect clip-path="url(#myClip)" x="10" y="10" width="30" height="30" stroke="red" fill="blue" />
-        <image href="img/natalie.jpg" clip-path="url(#myClip)" x="0" y="0" height="100%" width="100%" />
-      </svg> -->
+    <div class="natalie hidden">
+        <h2>Natalie Sirich</h2>
+        <svg class="svg-graphic" width="180" height="200" viewBox="0 0 560 645" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1">
+          <g>
+            <clipPath id="hexagonal-mask">
+              <polygon points="130,0 0,160 0,485 270,645 560,485 560,160" />
+            </clipPath>
+          </g>
+          <a>
+            <image clip-path="url(#hexagonal-mask)" height="100%" width="100%" xlink:href="img/natalie.jpg" class="spotlight-enter-active" />
+          </a>
+        </svg>
+      </div>
 
-      <img src="img/natalie.jpg" alt="" class="spotlight-enter-active" />
-      <h1 class="natalie-name hidden">Natalie Sirich</h1>
+    <div class="info hidden">
+      <svg viewBox="0 0 1000 800">
+        <symbol id="a-text">
+          <text text-anchor="middle" x="50%" y="35%" class="text--line3">
+            Assignment
+          </text>
+          <text text-anchor="middle" x="50%" y="68%" class="text--line4">
+            14C.01.05
+          </text>
+        </symbol>
+
+        <g class="g-ants">
+          <use xlink:href="#a-text" class="text-copy"></use>
+          <use xlink:href="#a-text" class="text-copy"></use>
+          <use xlink:href="#a-text" class="text-copy"></use>
+          <use xlink:href="#a-text" class="text-copy"></use>
+          <use xlink:href="#a-text" class="text-copy"></use>
+        </g>
+      </svg>
     </div>
+
+    <div class="sarah hidden">
+      <h2>Sarah Davidsen</h2>
+      <svg class="svg-graphic" width="180" height="200" viewBox="0 0 560 645" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1">
+        <g>
+          <clipPath id="hexagonal-mask">
+            <polygon points="130,0 0,160 0,485 270,645 560,485 560,160" />
+          </clipPath>
+        </g>
+        <a>
+          <image clip-path="url(#hexagonal-mask)" height="100%" width="100%" xlink:href="img/sarah.jpg" class="spotlight-enter-active" />
+        </a>
+      </svg>
+    </div>
+
+    <div class="video-clip hidden">
+        <video autoplay mute loop>
+            <source src="https://jannickholm.dk/files/coverr-water-flow-1561477637098.mp4" type="video/mp4">
+            <source src="https://jannickholm.dk/files/coverr-water-flow-1561477637098.mp4" type="video/webm">
+        </video>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 900">
+          <defs>
+              <mask id="imask" >
+                  <image width="1440" height="900" xlink:href="http://jannickholm.dk/files/Untitled-1.svg"></image>
+              </mask>
+          </defs>
+      </svg>
+    </div>
+
+    <div class="jannick hidden">
+        <h2>Jannick Holm</h2>
+        <svg class="svg-graphic" width="180" height="200" viewBox="0 0 560 645" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1">
+          <g>
+            <clipPath id="hexagonal-mask">
+              <polygon points="130,0 0,160 0,485 270,645 560,485 560,160" />
+            </clipPath>
+          </g>
+          <a>
+            <image clip-path="url(#hexagonal-mask)" height="100%" width="100%" xlink:href="https://jannickholm.dk/October%2027th%20Jannick_Studiosession-031_b&W.jpg" class="spotlight-enter-active" />
+          </a>
+        </svg>
+      </div>
+
+
+
+    <audio id="musik" src="The_Office.mp3"></audio>
 
     <script src="script.js"></script>
   </body>
 </html>
+
+
+  

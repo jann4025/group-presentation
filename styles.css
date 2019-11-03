@@ -1,10 +1,17 @@
+
 html,
 body {
   height: 100%;
 }
-
+h2 {
+  font-size: 70px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+  
 body {
-  background: #082330;
+  background: rgb(1, 17, 22);
   background-size: 0.12em 100%;
   font: 16em/1 Arial;
 }
@@ -13,13 +20,18 @@ body {
   font-size: 0.5em;
 }
 
+.text--line3,
+.text--line4 {
+  font-size: .5em;
+}
+
 svg {
   position: absolute;
   width: 100vw;
   height: 80vh;
 }
 
-.text-copy {
+ .text-copy {
   fill: none;
   stroke: white;
   stroke-dasharray: 7% 28%;
@@ -27,23 +39,23 @@ svg {
   animation: stroke-offset 1s linear;
 }
 .text-copy:nth-child(1) {
-  stroke: #360745;
+  stroke: #4d4d4d;
   stroke-dashoffset: 7%;
 }
 .text-copy:nth-child(2) {
-  stroke: #d61c59;
+  stroke: #f16a70;
   stroke-dashoffset: 14%;
 }
 .text-copy:nth-child(3) {
-  stroke: #e7d84b;
+  stroke: #b1d877;
   stroke-dashoffset: 21%;
 }
 .text-copy:nth-child(4) {
-  stroke: #efeac5;
+  stroke: whitesmoke;
   stroke-dashoffset: 28%;
 }
 .text-copy:nth-child(5) {
-  stroke: #1b8798;
+  stroke: #8cdcda;
   stroke-dashoffset: 35%;
 }
 
@@ -63,25 +75,102 @@ svg {
 }
 
 button {
-  transform: scale(0);
-  opacity: 0;
-  animation: startButton 1.2s ease-in both;
-  animation-delay: 1s;
+  background: whitesmoke;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 30px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 37%;
+  text-align: center;
+  color: #f16a70;
+  border: 1px solid #f16a70;
+  border-radius: 5px;
+  line-height: 3em;
+  padding-left: 5em;
+  padding-right: 5em;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+
+}
+button:hover {
+  color: whitesmoke;
+  box-shadow: 0 0 30px 0 rgba(0, 199, 236, 0.5);
+  background-color: #f16a70;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+button:hover:before {
+  -webkit-animation: shine 0.5s 0s linear;
+  -moz-animation: shine 0.5s 0s linear;
+  animation: shine 0.5s 0s linear;
+}
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+button:before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
   position: absolute;
   left: 47%;
   bottom: 0;
-  font-size: 40px;
-  border-radius: 10px;
-  padding: 10px;
-  background: linear-gradient(to right, #1b8798 0%, #360745 100%);
-  color: whitesmoke;
-  border: none;
+  opacity: 0;
+  background: whitesmoke;
+  box-shadow: 0 0 15px 3px whitesmoke;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
 }
 
-@keyframes startButton {
-  100% {
-    transform: scale(1);
+@-webkit-keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
     opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+@-moz-keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
   }
 }
 
@@ -93,9 +182,9 @@ button {
   display: none;
 }
 
-.intro {
+/* .intro {
   position: relative;
-}
+} */
 
 img {
   width: 300px;
@@ -129,8 +218,7 @@ img {
 }
 
 .natalie-name {
-  font-size: 0.1em;
-
+  font-size: .2em;
   position: absolute;
   font-family: sans-serif;
   text-transform: uppercase;
@@ -153,5 +241,36 @@ img {
   }
   100% {
     background-position: 500%;
+  }
+}
+
+
+.intro, .video-clip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+video {
+  width: 100%;
+  mask:url('#imask');
+  -webkit-mask:url('http://jannickholm.dk/files/Untitled-1.svg');
+}
+
+.fadeIn {
+  animation: fadeIn 4s linear;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
   }
 }
